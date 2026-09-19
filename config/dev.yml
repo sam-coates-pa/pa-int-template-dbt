@@ -1,1 +1,5 @@
+environment: dev
 
+database: analytics_dev
+
+schema: dbt_dev
