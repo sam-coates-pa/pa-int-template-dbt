@@ -1,1 +1,5 @@
+environment: test
 
+database: analytics_test
+
+schema: dbt_test
