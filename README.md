@@ -1,11 +1,11 @@
 # dbt Transformation Template
 
 A practical, production-minded template for building **dbt-powered analytics and transformation solutions**. It includes ready-made patterns for **source definitions**, **staging models**, **intermediate transformations**, **fact and dimension marts**, **data quality testing**, **snapshots for historical tracking**, **reusable macros**, and **CI/CD deployment pipelines**.
- 
+
+
 Use this as a GitHub Template Repository to provide a fast, consistent starting point for analytics engineering projects across **Snowflake**, **Databricks**, **BigQuery**, **Redshift**, and other supported dbt platforms.
- 
+
 ---
- 
 ## What's Included
  
 - **End-to-end transformation flow**: Sources → Staging → Intermediate → Marts → Analytics
