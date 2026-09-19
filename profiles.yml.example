@@ -1,1 +1,24 @@
+pa_int_template_dbt:
 
+  target: dev
+
+  outputs:
+
+    dev:
+      type: snowflake
+
+      account: account_name
+
+      user: dbt_user
+
+      password: password
+
+      role: TRANSFORMER
+
+      warehouse: COMPUTE_WH
+
+      database: ANALYTICS_DEV
+
+      schema: DBT_DEV
+
+      threads: 4
