@@ -115,6 +115,7 @@ F --> I
 ├── packages.yml                          # dbt package dependencies
 ├── profiles.yml.example                  # Example local profile configuration
 ├── Makefile                              # Common development commands
+├── requirements.txt                      # dbt adapters, packages, SQL linting, testing and development dependencies
 └── README.md                             # Repository documentation
 ```
 
