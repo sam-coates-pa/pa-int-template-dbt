@@ -1,16 +1,26 @@
-# pa-int-template-dbt
-
+# dbt Transformation Template
+ 
+A practical, production-minded template for building **dbt-powered analytics and transformation solutions**. It includes ready-made patterns for **source definitions**, **staging models**, **intermediate transformations**, **fact and dimension marts**, **data quality testing**, **snapshots for historical tracking**, **reusable macros**, and **CI/CD deployment pipelines**.
+ 
+Use this as a GitHub Template Repository to provide a fast, consistent starting point for analytics engineering projects across **Snowflake**, **Databricks**, **BigQuery**, **Redshift**, and other supported dbt platforms.
+ 
+---
+ 
 ## What's Included
-- Layered architecture: Sources → Staging → Intermediate → Marts
-- Testing framework: Schema, uniqueness, referential integrity, custom tests
-- Documentation: Auto-generated dbt docs
-- Reusable macros: Standardised transformation patterns
-- Incremental loading: Examples for large datasets
-- Snapshots: SCD Type 2 history tracking
-- CI/CD: GitHub Actions validation and deployment
-- Developer experience: Makefile, linting, SQL formatting, pre-commit hooks
-- Warehouse support: Snowflake, Databricks, BigQuery, Redshift
+ 
 
+- **End-to-end transformation flow**: Sources → Staging → Intermediate → Marts → Analytics
+  
+- **dbt modelling patterns**: Source definitions, staging models, reusable business transformations, facts and dimensions
+
+- **Data quality framework**: Generic tests, custom tests, documentation, and lineage tracking
+
+- **Analytics engineering features**: Snapshots (SCD Type 2), seeds, macros, incremental models, and reusable utilities
+
+- **Developer experience**: Configuration files, example models, Makefile, GitHub Actions, and documented best practices
+
+- **Platform agnostic**: Designed to work with Snowflake, Databricks, BigQuery, Redshift, and other dbt-supported warehouses
+ 
 ---
 
 ## Reference Architecture
