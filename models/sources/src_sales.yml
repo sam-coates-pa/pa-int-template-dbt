@@ -1,1 +1,26 @@
+version: 2
 
+sources:
+  - name: sales
+    description: Sales transaction data
+
+    schema: raw_sales
+
+    tables:
+      - name: orders
+
+        loaded_at_field: created_at
+
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - unique
+
+          - name: customer_id
+            tests:
+              - not_null
+
+          - name: product_id
+
+          - name: revenue
