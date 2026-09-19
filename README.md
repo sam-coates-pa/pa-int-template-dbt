@@ -15,50 +15,34 @@
 
 ## Reference Architecture
 
-┌──────────────────────────┐
-│      Source Systems      │
-└──────────────────────────┘
-             │
-             ▼
+```mermaid
 
-┌──────────────────────────┐
-│       Raw Layer          │
-│ (Ingestion Platform)     │
-└──────────────────────────┘
-             │
-             ▼
-
-┌──────────────────────────┐
-│    dbt Sources Layer     │
-│   Source Definitions     │
-└──────────────────────────┘
-             │
-             ▼
-
-┌──────────────────────────┐
-│      Staging Layer       │
-│  Standardisation & DQ    │
-└──────────────────────────┘
-             │
-             ▼
-
-┌──────────────────────────┐
-│   Intermediate Layer     │
-│ Business Transformations │
-└──────────────────────────┘
-             │
-             ▼
-
-┌──────────────────────────┐
-│        Mart Layer        │
-│ Facts & Dimensions       │
-└──────────────────────────┘
-             │
-             ▼
-
-┌──────────────────────────┐
-│ BI / Analytics / ML      │
-└──────────────────────────┘
+flowchart TD
+ 
+A[Source Systems]
+B[Raw Layer<br/>Ingestion Platform]
+ 
+subgraph DBT["dbt Transformation Layer"]
+C[Sources]
+D[Staging]
+E[Intermediate]
+F[Marts]
+end
+ 
+G[BI / Analytics]
+H[Machine Learning]
+I[Data Products]
+ 
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+ 
+F --> G
+F --> H
+F --> I
+```
 
 
 ## Project Layout
@@ -150,3 +134,16 @@ tests/* = Custom data quality tests
 
 macros/* = Reusable SQL functions
 
+---
+
+## Quick Start
+
+```bash
+pip install -r requirements.txt
+
+dbt deps
+
+dbt debug
+
+dbt build
+```
