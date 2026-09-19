@@ -1,0 +1,16 @@
+dbt-core>=1.10.0              # Core dbt functionality and CLI
+dbt-snowflake>=1.10.0         # Snowflake database adapter (optional)
+dbt-databricks>=1.10.0        # Databricks database adapter (optional)
+
+# Community packages
+dbt-utils                     # Common utility macros (surrogate keys, date spines, unions, etc.)
+dbt-expectations              # Extended data quality and testing framework
+
+# SQL quality and formatting
+sqlfluff                      # SQL linting and style enforcement
+sqlfluff-templater-dbt        # Enables SQLFluff to parse dbt Jinja syntax
+
+# Development tooling
+pre-commit                    # Automated checks before code commits
+pytest                        # Python-based unit and integration testing
+pyyaml                        # Read and write YAML configuration files
