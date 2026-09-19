@@ -1,1 +1,20 @@
+version: 2
 
+sources:
+  - name: customers
+    description: Customer master data from CRM
+
+    schema: raw_customers
+
+    tables:
+      - name: customers
+
+        columns:
+          - name: customer_id
+            tests:
+              - not_null
+              - unique
+
+          - name: customer_name
+
+          - name: status
