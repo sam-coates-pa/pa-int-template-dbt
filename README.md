@@ -119,27 +119,27 @@ F --> I
 ```
 
 ## Naming Convention Notation
-src_* = Source definitions
+- **src_*** = Source definitions
 
-stg_* = Staging models
+- **stg_*** = Staging models
         One source table -> one staging model
 
-int_* = Intermediate models
+- **int_*** = Intermediate models
         Reusable business logic
 
-dim_* = Dimension tables
+- **dim_*** = Dimension tables
         Descriptive business entities
 
-fct_* = Fact tables
+- **fct_*** = Fact tables
         Measurable business events
 
-rpt_* = Reporting layer (optional)
+- **rpt_*** = Reporting layer (optional)
 
-snapshots/* = Historical tracking
+- **snapshots/*** = Historical tracking
 
-tests/* = Custom data quality tests
+- **tests/*** = Custom data quality tests
 
-macros/* = Reusable SQL functions
+- **macros/*** = Reusable SQL functions
 
 ---
 
