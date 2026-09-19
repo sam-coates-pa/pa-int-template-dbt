@@ -8,7 +8,6 @@ Use this as a GitHub Template Repository to provide a fast, consistent starting 
  
 ## What's Included
  
-
 - **End-to-end transformation flow**: Sources → Staging → Intermediate → Marts → Analytics
   
 - **dbt modelling patterns**: Source definitions, staging models, reusable business transformations, facts and dimensions
