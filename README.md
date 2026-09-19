@@ -154,3 +154,146 @@ dbt debug
 
 dbt build
 ```
+---
+
+## Documentation
+
+dbt can automatically generate interactive project documentation, including:
+
+- Model descriptions
+- Column descriptions
+- Data lineage
+- Source definitions
+- Tests
+- Exposures
+- Dependencies between models
+
+### Add Documentation to Models
+
+Include descriptions in your YAML files:
+
+```yaml
+version: 2
+
+models:
+  - name: dim_customer
+    description: Master customer dimension used for reporting.
+
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+
+      - name: customer_name
+        description: Customer full name.
+
+      - name: customer_status
+        description: Current customer status.
+```
+
+### Generate Documentation
+
+Build the catalog and metadata files:
+
+```bash
+dbt docs generate
+```
+
+This creates documentation artifacts in the `target/` folder.
+
+### View Documentation Locally
+
+Start the local documentation server:
+
+```bash
+dbt docs serve
+```
+
+By default, dbt will launch a local web server:
+
+```text
+http://localhost:8080
+```
+
+You can then explore:
+
+- Project overview
+- Model lineage graph
+- Source-to-mart data flows
+- Model metadata
+- Tests and documentation coverage
+
+### Typical Workflow
+
+Generate documentation after changes to models, sources, or tests:
+
+```bash
+dbt build
+dbt docs generate
+dbt docs serve
+```
+
+### Example Lineage
+
+```text
+src_customers
+      │
+      ▼
+stg_customers
+      │
+      ▼
+dim_customer
+      │
+      ▼
+Power BI Dashboard
+```
+
+Within dbt Docs this lineage is displayed as an interactive dependency graph.
+
+### Documentation Best Practices
+
+✅ Add descriptions to all models
+
+✅ Add descriptions to all columns
+
+✅ Document all sources
+
+✅ Generate docs during CI/CD
+
+✅ Review lineage periodically
+
+✅ Keep business definitions close to the models
+
+❌ Do not leave production-facing models undocumented
+
+### CI/CD Example
+
+Generate documentation during deployment:
+
+```yaml
+- name: Generate dbt Docs
+  run: dbt docs generate
+```
+
+Documentation artifacts (`manifest.json`, `catalog.json`) can then be published to a static website, cloud storage, or dbt Cloud.
+
+### Makefile Commands
+
+The template includes a helper command:
+
+```bash
+make docs
+```
+
+Which runs:
+
+```bash
+dbt docs generate
+```
+
+To view documentation locally:
+
+```bash
+dbt docs serve
+```
+
+---
