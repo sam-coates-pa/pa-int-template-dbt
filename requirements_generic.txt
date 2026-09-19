@@ -1,0 +1,11 @@
+dbt-core>=1.10.0
+
+dbt-utils
+dbt-expectations
+
+sqlfluff
+sqlfluff-templater-dbt
+
+pre-commit
+pytest
+pyyaml
